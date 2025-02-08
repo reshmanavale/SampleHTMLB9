@@ -1,0 +1,13 @@
+name: B9 - Deployment on EC2
+
+on: 
+  push: 
+    braches: 
+      - main
+job:
+  deployemnt:
+    run-on: ubuntu-latest
+
+    steps: 
+    - name: checkout code from github repo
+      uses: actions/checkout@v4
