@@ -11,3 +11,10 @@ job:
     steps: 
     - name: checkout code from github repo
       uses: actions/checkout@v4
+      - name: Run some commands
+
+      run: |
+        whoami
+        ls -al
+        pwd
+        cat index.html
