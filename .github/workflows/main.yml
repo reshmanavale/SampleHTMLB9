@@ -1,18 +1,19 @@
 name: B9 - Deployment on EC2
 
-on: 
-  push: 
-    braches: 
+on: #push, pull_request, create, delete
+  push:
+    branches:
       - main
-job:
-  deployemnt:
-    run-on: ubuntu-latest
 
-    steps: 
-    - name: checkout code from github repo
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code from github repo
       uses: actions/checkout@v4
-      - name: Run some commands
 
+    - name: Run some commands
       run: |
         whoami
         ls -al
